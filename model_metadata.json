@@ -1,0 +1,316 @@
+{
+    "project": "CarPriceAI \u2013 Advanced Used Car Price Prediction System",
+    "developer": "Sushmitha Reddy M (Joy University)",
+    "version": "1.0.0",
+    "champion_model": "Blended Ensemble (RF + GB)",
+    "champion_metrics": {
+        "model_name": "Blended Ensemble (RF + GB)",
+        "mae": 96279.55,
+        "mse": 33339062713.19,
+        "rmse": 182589.88,
+        "r2_score": 0.948,
+        "mape_percent": 18.28
+    },
+    "leaderboard": [
+        {
+            "model_name": "Linear Regression",
+            "mae": 242757.1,
+            "mse": 161574324403.34,
+            "rmse": 401963.09,
+            "r2_score": 0.7478,
+            "mape_percent": 51.91
+        },
+        {
+            "model_name": "Decision Tree Regressor",
+            "mae": 139759.52,
+            "mse": 61547373313.14,
+            "rmse": 248087.43,
+            "r2_score": 0.9039,
+            "mape_percent": 24.52
+        },
+        {
+            "model_name": "Random Forest Regressor",
+            "mae": 97662.26,
+            "mse": 33961697843.65,
+            "rmse": 184287.0,
+            "r2_score": 0.947,
+            "mape_percent": 17.15
+        },
+        {
+            "model_name": "Gradient Boosting Regressor",
+            "mae": 99701.58,
+            "mse": 35643703872.24,
+            "rmse": 188795.4,
+            "r2_score": 0.9444,
+            "mape_percent": 23.01
+        },
+        {
+            "model_name": "Blended Ensemble (RF + GB)",
+            "mae": 96279.55,
+            "mse": 33339062713.19,
+            "rmse": 182589.88,
+            "r2_score": 0.948,
+            "mape_percent": 18.28
+        }
+    ],
+    "price_statistics": {
+        "count": 4240.0,
+        "mean": 668450.71,
+        "median": 363000.0,
+        "std": 789117.21,
+        "min": 45000.0,
+        "q1": 175000.0,
+        "q3": 828000.0,
+        "iqr": 653000.0,
+        "max": 6062000.0,
+        "skewness": 2.4051,
+        "kurtosis": 7.0425
+    },
+    "km_statistics": {
+        "count": 4240.0,
+        "mean": 119157.88,
+        "median": 111631.0,
+        "std": 54057.69,
+        "min": 8299.0,
+        "q1": 79140.0,
+        "q3": 153712.0,
+        "iqr": 74572.0,
+        "max": 280000.0,
+        "skewness": 0.6272,
+        "kurtosis": 0.0225
+    },
+    "wrangle_summary": {
+        "initial_rows": 4240,
+        "duplicates_removed": 40,
+        "missing_values_imputed": {
+            "mileage": 71,
+            "engine": 52,
+            "max_power": 68,
+            "seats": 48
+        },
+        "final_clean_rows": 4200
+    },
+    "correlation_matrix": {
+        "year": {
+            "year": 1.0,
+            "selling_price": 0.4064,
+            "km_driven": -0.8321,
+            "mileage": -0.0096,
+            "engine": 0.0069,
+            "max_power": -0.0032,
+            "seats": 0.0248
+        },
+        "selling_price": {
+            "year": 0.4064,
+            "selling_price": 1.0,
+            "km_driven": -0.357,
+            "mileage": -0.3545,
+            "engine": 0.5235,
+            "max_power": 0.6882,
+            "seats": 0.0098
+        },
+        "km_driven": {
+            "year": -0.8321,
+            "selling_price": -0.357,
+            "km_driven": 1.0,
+            "mileage": 0.0162,
+            "engine": -0.0127,
+            "max_power": -0.0023,
+            "seats": -0.027
+        },
+        "mileage": {
+            "year": -0.0096,
+            "selling_price": -0.3545,
+            "km_driven": 0.0162,
+            "mileage": 1.0,
+            "engine": -0.6614,
+            "max_power": -0.6363,
+            "seats": -0.3021
+        },
+        "engine": {
+            "year": 0.0069,
+            "selling_price": 0.5235,
+            "km_driven": -0.0127,
+            "mileage": -0.6614,
+            "engine": 1.0,
+            "max_power": 0.8714,
+            "seats": 0.4264
+        },
+        "max_power": {
+            "year": -0.0032,
+            "selling_price": 0.6882,
+            "km_driven": -0.0023,
+            "mileage": -0.6363,
+            "engine": 0.8714,
+            "max_power": 1.0,
+            "seats": 0.1476
+        },
+        "seats": {
+            "year": 0.0248,
+            "selling_price": 0.0098,
+            "km_driven": -0.027,
+            "mileage": -0.3021,
+            "engine": 0.4264,
+            "max_power": 0.1476,
+            "seats": 1.0
+        }
+    },
+    "depreciation_trend": [
+        {
+            "year": 2008,
+            "avg_price": 110400.0,
+            "median_price": 88000.0,
+            "count": 15
+        },
+        {
+            "year": 2009,
+            "avg_price": 148478.26,
+            "median_price": 84000.0,
+            "count": 46
+        },
+        {
+            "year": 2010,
+            "avg_price": 219619.72,
+            "median_price": 117000.0,
+            "count": 71
+        },
+        {
+            "year": 2011,
+            "avg_price": 241227.85,
+            "median_price": 120000.0,
+            "count": 79
+        },
+        {
+            "year": 2012,
+            "avg_price": 230410.07,
+            "median_price": 148000.0,
+            "count": 139
+        },
+        {
+            "year": 2013,
+            "avg_price": 325741.38,
+            "median_price": 176000.0,
+            "count": 232
+        },
+        {
+            "year": 2014,
+            "avg_price": 355229.81,
+            "median_price": 222000.0,
+            "count": 322
+        },
+        {
+            "year": 2015,
+            "avg_price": 411937.16,
+            "median_price": 242000.0,
+            "count": 366
+        },
+        {
+            "year": 2016,
+            "avg_price": 431364.29,
+            "median_price": 253000.0,
+            "count": 420
+        },
+        {
+            "year": 2017,
+            "avg_price": 595030.04,
+            "median_price": 371000.0,
+            "count": 466
+        },
+        {
+            "year": 2018,
+            "avg_price": 667076.06,
+            "median_price": 387000.0,
+            "count": 447
+        },
+        {
+            "year": 2019,
+            "avg_price": 756348.27,
+            "median_price": 459000.0,
+            "count": 491
+        },
+        {
+            "year": 2020,
+            "avg_price": 924438.29,
+            "median_price": 562000.0,
+            "count": 397
+        },
+        {
+            "year": 2021,
+            "avg_price": 1149491.12,
+            "median_price": 711000.0,
+            "count": 338
+        },
+        {
+            "year": 2022,
+            "avg_price": 1325057.78,
+            "median_price": 793000.0,
+            "count": 225
+        },
+        {
+            "year": 2023,
+            "avg_price": 1335076.19,
+            "median_price": 790000.0,
+            "count": 105
+        },
+        {
+            "year": 2024,
+            "avg_price": 1795926.83,
+            "median_price": 821000.0,
+            "count": 41
+        }
+    ],
+    "fuel_distribution": [
+        {
+            "category": "Diesel",
+            "count": 2395,
+            "avg_price": 993698.12,
+            "min_price": 45000.0,
+            "max_price": 6062000.0
+        },
+        {
+            "category": "Petrol",
+            "count": 1614,
+            "avg_price": 239772.61,
+            "min_price": 45000.0,
+            "max_price": 1301000.0
+        },
+        {
+            "category": "CNG",
+            "count": 167,
+            "avg_price": 236305.39,
+            "min_price": 45000.0,
+            "max_price": 1085000.0
+        },
+        {
+            "category": "LPG",
+            "count": 24,
+            "avg_price": 209000.0,
+            "min_price": 45000.0,
+            "max_price": 687000.0
+        }
+    ],
+    "cluster_labels": {
+        "2": "Economy Commuter",
+        "0": "Mid-Range Executive",
+        "1": "Luxury Premium"
+    },
+    "feature_names": [
+        "vehicle_age",
+        "km_driven",
+        "mileage",
+        "engine_cc",
+        "max_power",
+        "seats",
+        "owner_tier",
+        "brand_tier",
+        "fuel_diesel",
+        "fuel_petrol",
+        "fuel_cng",
+        "transmission_automatic",
+        "seller_dealer"
+    ],
+    "ensemble_weights": {
+        "rf": 0.7,
+        "gb": 0.3
+    }
+}
